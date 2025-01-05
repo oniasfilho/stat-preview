@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: "Inter", serif;
+  font-family: 'Inter', serif;
 }
 
 .card {
@@ -23,10 +23,9 @@ body {
 
 .primeira {
   height: 240px;
-  background-image: url("./images/bg-mobile.png");
+  background-image: url('./images/bg-mobile.png');
   transform: translateY(8px);
   border-radius: 0px 0px 10px 10px;
-
 }
 
 .segunda {
@@ -51,7 +50,7 @@ body {
 }
 
 .insights {
-  color: #AB5CDB;
+  color: #ab5cdb;
 }
 
 .stats {
@@ -68,14 +67,13 @@ body {
 
 .stat-subtitle {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @media (min-width: 1110px) {
   .card {
     display: flex;
-    flex-direction: row;
-    background-color: rgb(102, 116, 197);
+    flex-direction: row-reverse;
     width: 1110px;
     height: 446px;
   }
@@ -83,10 +81,46 @@ body {
   .primeira {
     height: 100%;
     width: 540px;
+    background-image: url('./images/bg-desktop.png');
+    transform: translateY(0px);
+    border-radius: 0 0 0 0;
   }
-  
+
   .segunda {
-    height: 100%;
-    width: 570px;
+    height: calc(100% - 71px);
+    width: 403px;
+    padding: 0;
+    margin: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 0px;
+    padding-left: 72px;
+    padding-right: 95px;
+    padding-top: 71px;
   }
+
+  .title {
+    text-align: left;
+    max-width: 280px;
+  }
+
+  .subtitle {
+    margin-top: 25px;
+    text-align: left;
+    max-width: 374px;
+  }
+
+  .stats {
+    margin-top: 72px;
+    flex-direction: row;
+    gap: 60px;
+    text-align: left;
+  }
+
+  .single-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
 }
